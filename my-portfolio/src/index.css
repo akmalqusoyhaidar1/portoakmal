@@ -1,0 +1,28 @@
+:root{
+	--bg: #0f1724;
+	--card: #0b1220;
+	--muted: #94a3b8;
+	--accent: #6ee7b7;
+	--glass: rgba(255,255,255,0.04);
+	--glass-2: rgba(255,255,255,0.02);
+	--white: #e6eef8;
+	font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+	margin:0;
+	background: linear-gradient(180deg,var(--bg) 0%, #071023 100%);
+	color:var(--white);
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+	line-height:1.4;
+}
+
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+
+/* Utility */
+.container{max-width:1100px;margin:0 auto;padding:40px 20px}
+.section{padding:60px 0}
