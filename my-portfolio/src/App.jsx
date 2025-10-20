@@ -1,6 +1,7 @@
 
 import React from 'react'
 import './App.css'
+import TechList from './components/TechList'
 
 const projects = [
 	{
@@ -27,6 +28,7 @@ const projects = [
 ]
 
 export default function App(){
+	const [open, setOpen] = React.useState(false)
 	return (
 		<div className="app-root">
 			<header className="site-header">
@@ -34,17 +36,26 @@ export default function App(){
 					<div className="brand">
 						<img src="/vite.svg" alt="Site logo" className="brand-logo" />
 					</div>
-					<nav className="nav">
-						<a href="#about">About</a>
-						<a href="#projects">Projects</a>
-						<a href="#skills">Skills</a>
-						<a href="#contact" className="btn-outline">Contact</a>
+					<button
+						aria-label={open ? 'Close menu' : 'Open menu'}
+						className={`nav-toggle ${open ? 'open' : ''}`}
+						onClick={() => setOpen(v => !v)}
+					>
+						<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+							<path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/>
+						</svg>
+					</button>
+					<nav className={`nav ${open ? 'open' : ''}`}>
+						<a href="#about" onClick={() => setOpen(false)}>About</a>
+						<a href="#projects" onClick={() => setOpen(false)}>Projects</a>
+						<a href="#skills" onClick={() => setOpen(false)}>Skills</a>
+						<a href="#contact" className="btn-outline" onClick={() => setOpen(false)}>Contact</a>
 					</nav>
 				</div>
 			</header>
 
 			<main>
-				<section className="hero section">
+				<section id="main" className="hero section">
 					<div className="container hero-grid">
 						<div className="hero-copy">
 							<h1>Hi, I’m Akmaludin — Product-focused Developer</h1>
@@ -56,7 +67,7 @@ export default function App(){
 						</div>
 						<div className="hero-card">
 							<div className="profile">
-								<img src="/image.jpg" alt="Akmaludin" className="avatar-img" />
+								<img src="/image.jpg" alt="Akmaludin" className="avatar-img avatar" />
 								<h3>Akmaludin</h3>
 								<p className="muted">Frontend Engineer • Product Designer • Accessibility</p>
 								<div className="contact-inline">
@@ -148,6 +159,8 @@ export default function App(){
 								<p className="muted">Node.js, Express, Postgres, Serverless</p>
 							</div>
 						</div>
+						{/* TechList shows technologies used (logos + versions) */}
+						<TechList />
 					</div>
 				</section>
 
