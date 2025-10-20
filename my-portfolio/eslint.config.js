@@ -10,6 +10,7 @@ export default defineConfig([
     files: ['**/*.{js,jsx}'],
     extends: [
       js.configs.recommended,
+      // use plugin-provided config objects to avoid shareable-config resolution issues
       reactHooks.configs['recommended-latest'],
       reactRefresh.configs.vite,
     ],
