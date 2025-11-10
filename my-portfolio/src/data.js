@@ -34,7 +34,8 @@ export const listTools = [
   { id: 7, image: LOGO_NODE || PLACEHOLDER_IMAGE, name: 'Node.js', type: 'Runtime', notes: 'Build tools / dev server' },
   { id: 8, image: LOGO_GITHUB || PLACEHOLDER_IMAGE, name: 'GitHub', type: 'VCS', notes: 'Source hosting' },
   { id: 9, image: LOGO_ILLUSTRATOR || PLACEHOLDER_IMAGE, name: 'Adobe Illustrator', type: 'Design App', notes: 'Vector design' },
-  { id: 10, image: LOGO_npmnpmCANVA || PLACEHOLDER_IMAGE, name: 'Canva', type: 'Design App', notes: 'Quick graphics' },
+  { id: 10, image: LOGO_CANVA || PLACEHOLDER_IMAGE, name: 'Canva', type: 'Design App', notes: 'Quick graphics' },
+
   { id: 11, image: LOGO_FIGMA || PLACEHOLDER_IMAGE, name: 'Figma', type: 'Design App', notes: 'UI/UX design' },
 ];
 
